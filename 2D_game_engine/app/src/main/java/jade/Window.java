@@ -1,26 +1,18 @@
 package jade;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
-import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL;
-import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import org.lwjgl.system.MemoryUtil;
-
-
-import org.apache.commons.lang3.ObjectUtils.Null;
-
-import static org.lwjgl.opengl.GL.createCapabilities;
-
 
 public class Window {
 int width,height;
 String title;
 private long glfwWindow;
-
-
 private static Window window = null;
+
+
     private Window(){
         this.width=1920;
         this.height=1080;
@@ -33,7 +25,6 @@ private static Window window = null;
         }
         return Window.window;
     }
-
     public void run(){
         System.out.println("Hello LWJGL "+ Version.getVersion()+"!");
         init();
